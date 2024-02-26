@@ -15,6 +15,7 @@ router.get(
     '/Parents',
     parentsValidation.getParentValidation(),
     parents.Parents);
+    
 
 
 router.get('/Students', students.getStudentsById);
