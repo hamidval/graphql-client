@@ -1,0 +1,52 @@
+{
+  "name": "graphql-client-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "test:ci": "jest",
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "serve": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/accept-language-parser": "^1.5.6",
+    "accept-language-parser": "^1.5.0",
+    "connect-datadog": "^0.0.9",
+    "eslint": "^8.56.0",
+    "express-validator": "^7.0.1",
+    "graphql-request": "^6.1.0",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "winston": "^3.11.0",
+    "winston-transport": "^4.7.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
+    "@jest/globals": "^29.7.0",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "express": "^4.18.2",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.3",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
+  }
+}
