@@ -1,0 +1,1 @@
+{"version":3,"file":"swaggerinfo.js","sourceRoot":"","sources":["../../src/swagger/swaggerinfo.ts"],"names":[],"mappings":";;;AAAA,MAAM,IAAI,GAAG;IACT,KAAK,EAAE,YAAY;IACnB,WAAW,EACT,wPAAwP;IAC1P,cAAc,EAAE,0BAA0B;IAC1C,OAAO,EAAE;IACP,gCAAgC;KACjC;IACD,OAAO,EAAE;QACP,IAAI,EAAE,YAAY;QAClB,GAAG,EAAE,iDAAiD;KACvD;IACD,OAAO,EAAE,CAAC;CACX,CAAC;AAEO,oBAAI"}

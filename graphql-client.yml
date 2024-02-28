@@ -44,7 +44,7 @@ jobs:
       platform: linux
       run:
         path: npm
-        args: ["run build"]
+        args: ["run", "build"]
         dir: graphql-client
   - task: test
     image: node-image

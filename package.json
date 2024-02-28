@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/accept-language-parser": "^1.5.6",
+    "apollo-server": "^3.13.0",
     "accept-language-parser": "^1.5.0",
     "connect-datadog": "^0.0.9",
     "eslint": "^8.56.0",

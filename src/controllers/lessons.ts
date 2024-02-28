@@ -37,6 +37,13 @@ import { sendValidationResponse } from '../validation/validationUtils';
  *           type: integer
  *           format: int64
  *       - in: query
+ *         name: notDay
+ *         description: to get the lessons not on this day
+ *         required: false
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *       - in: query
  *         name: locale
  *         description: Language to return
  *         required: false
@@ -62,8 +69,16 @@ async function getLessons(req: Request, res: Response)
       return;
     }
 
-    var {id, day, studentId} = req.query;
-    var variables = {lessonInput:{filter:{id: checkNumber(id), day:checkNumber(day), studentId:checkNumber(studentId)}}}
+    var {id, day, studentId, notDay} = req.query;
+    console.log(notDay)
+    var variables = {lessonInput:{filter:{
+      id: checkNumber(id), 
+      day:checkNumber(day), 
+      studentId:checkNumber(studentId),
+      notDay: checkNumber(notDay)
+    },
+      
+    }}
     var url = 'http://localhost:4000/graphql'
     var data = await request(
         {
@@ -74,8 +89,6 @@ async function getLessons(req: Request, res: Response)
 
       res.status(200).json(new LessonTransform().lessons(data));       
 }
-
-
 
 
 
